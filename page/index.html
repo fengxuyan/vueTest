@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+
+    <span v-bind:title="message">这里可以查看动态绑定的信息</span>
+    {{message}}
+
+    <p v-if="seen" v-on:click="reverseMessage">这里决定你能否看到这条</p>
+    <ul>
+        <li v-for="todo in todos">{{todo.text}}</li>
+    </ul>
+
+    <input v-model="message">
+    <ol>
+        <todo-item v-for="item in todos" v-bind:todo="item"></todo-item>
+    </ol>
+    <p>{{ fooy }}</p>
+    <button v-on:click="fooy = 'bazzzzzzz'">Change it</button>
+
+
+    <p>{{ fooy }}</p>
+    <!-- 这里的 `foo` 不会更新！ -->
+    <button v-on:click="fooy = 'baz'">Change it</button>
+
+
+</div>
+</body>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    Vue.component('todo-item', {
+        props: ['todo'],
+        template: '<li>这是步骤列表++++++{{todo.text}}</li>'
+    })
+
+    var obj = {
+        foo: 'bar'
+    }
+
+    Object.freeze(obj)
+
+
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'this is example' + new Date().toLocaleString(),
+            seen: true,
+            todos: [{text: '步骤一'}, {text: '步骤二'}, {text: '步骤三'}],
+
+
+            visitCount: 0,
+            error: null,
+            list: [],
+            fooy: obj
+        },
+        methods: {
+            reverseMessage: function () {
+                this.message = this.message.split('').reverse().join('')
+            }
+        }
+    })
+
+
+    var data = { a: 1};
+    var vm = new Vue({
+        //选项
+        data: data
+    })
+
+    console.log(vm.a== data.a);
+
+    Object.freeze(data);
+
+
+
+    data.a = 3;
+    console.log(data.a);
+    console.log(vm.a);
+
+
+
+
+
+
+</script>
+</html>

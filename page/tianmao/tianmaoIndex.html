@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>这是天猫儿</title>
+    <link rel="stylesheet" href="../../src/css/lib/reset.css">
+    <link rel="stylesheet" href="../../src/css/tianmao.css">
+    <link rel="stylesheet" href="../../src/fonts/font-awesome-4.7.0/scss/font-awesome.css">
+</head>
+<body>
+<div class="site-nav" id="site-nav">
+
+    <div class="nav-content">
+        <div class="g-left-nav">
+            <ul class="item-leftNav" v-for="leftnav in leftNavs">
+                <span v-if="leftnav.url == ''" >{{leftnav.navName}}</span>
+                <a v-if="leftnav.url != ''" href="leftnav.url">{{leftnav.navName}}</a>
+            </ul>
+        </div>
+        <div class="g-right-nav">
+            <ul class="item-rightNav" v-for="rightnav in rightNavs" v-on:mouseover="addActive($event)" v-on:mouseout="removeActive($event)" >
+                {{rightnav.faCon}}
+                <i class="fontCon fa"  class={{rightnav.faCon}} aria-hidden="true"></i>
+                <a href="#">{{rightnav.navName}}</a>
+                <span v-if="rightnav.dropMenu == 'true'" class="dropmenu-arrow">
+                      <i></i>
+                </span>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="header">
+    <div class="headerLayout">
+        <div class="headerCon">
+            <span class="mallLogo"></span>
+        </div>
+        <div class="mallSearch"></div>
+    </div>
+</div>
+<div class="content"></div>
+
+<script src="../../src/js/lib/rem.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+
+<script>
+    var siteNav = new Vue({
+        el: '#site-nav',
+        data: {
+            leftNavs: [{navName: '嗨,欢迎来天猫',url:''}, {navName: '请登录',url:'login'}, {navName: '免费注册',url:'register'}],
+            rightNavs: [
+                {navName: '我的淘宝', dropMenu:'true'}, {navName: '购物车',dropMenu:'false',faCon:'fa-shopping-cart'}, {navName: '收藏夹',dropMenu:'true'},
+                {navName: '手机版', dropMenu:'false'}, {navName: '淘宝网',dropMenu:'true'}, {navName: '商家支持',dropMenu:'false'},
+                {navName: '网站导航', dropMenu:'true'}],
+            show: 'true',
+            isActive: 'true'
+        },
+        methods: {
+            addActive:function ($event) {
+                console.log($event.currentTarget);
+                // console.log($event.currentTarget.lastElementChild);
+                // $event.currentTarget.className='rote'
+            },
+            removeActive:function ($event) {
+                // $event.currentTarget.className = "rote"
+            }
+        }
+    })
+</script>
+</body>
+</html>
