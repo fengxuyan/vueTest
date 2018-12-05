@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d5dcaa66-e4a4-40da-8aa1-9a41e6b4c731" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/page/tianmao/tianmaoIndex.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/tianmao/tianmaoIndex.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/tianmao.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/tianmao.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/tianmao.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/tianmao.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/tianmao.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/tianmao.scss" afterDir="false" />
-    </list>
+    <list default="true" id="d5dcaa66-e4a4-40da-8aa1-9a41e6b4c731" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -30,8 +25,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/page/tianmao/tianmaoIndex.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="107" lean-forward="true" selection-start-line="107" selection-end-line="107" />
+            <state relative-caret-position="54">
+              <caret line="87" column="19" selection-start-line="87" selection-start-column="19" selection-end-line="87" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -97,61 +92,6 @@
               <item name="vueTest" type="b2602c69:ProjectViewProjectNode" />
               <item name="vueTest" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="vueTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vueTest" type="462c0819:PsiDirectoryNode" />
-              <item name="page" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vueTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vueTest" type="462c0819:PsiDirectoryNode" />
-              <item name="page" type="462c0819:PsiDirectoryNode" />
-              <item name="tianmao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vueTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vueTest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vueTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vueTest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vueTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vueTest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vueTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vueTest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="fonts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vueTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vueTest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="fonts" type="462c0819:PsiDirectoryNode" />
-              <item name="font-awesome-4.7.0" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vueTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vueTest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vueTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vueTest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -201,19 +141,18 @@
       <workItem from="1543817952460" duration="6980000" />
       <workItem from="1543886247274" duration="10000" />
       <workItem from="1543886324317" duration="142000" />
-      <workItem from="1543886519802" duration="23364000" />
+      <workItem from="1543886519802" duration="23633000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30691000" />
+    <option name="totallyTimeSpent" value="30960000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="163" y="278" width="1193" height="711" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.042662118" />
-      <window_info active="true" id="Structure" order="1" side_tool="true" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.32935154" />
+      <window_info id="Structure" order="1" sideWeight="0.50080776" side_tool="true" visible="true" weight="0.32935154" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -268,8 +207,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/page/tianmao/tianmaoIndex.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="107" lean-forward="true" selection-start-line="107" selection-end-line="107" />
+        <state relative-caret-position="54">
+          <caret line="87" column="19" selection-start-line="87" selection-start-column="19" selection-end-line="87" selection-end-column="19" />
         </state>
       </provider>
     </entry>
