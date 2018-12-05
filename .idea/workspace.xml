@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5dcaa66-e4a4-40da-8aa1-9a41e6b4c731" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page/tianmao/tianmaoIndex.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/tianmao/tianmaoIndex.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/lib/reset.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/lib/reset.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/tianmao.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/tianmao.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/tianmao.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/tianmao.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/tianmao.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/tianmao.scss" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/page/tianmao/tianmaoIndex.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="123" column="10" lean-forward="true" selection-start-line="123" selection-start-column="10" selection-end-line="123" selection-end-column="10" />
+            <state relative-caret-position="135">
+              <caret line="120" lean-forward="true" selection-start-line="120" selection-end-line="120" />
               <folding>
                 <element signature="e#3235#5484#0" />
               </folding>
@@ -163,12 +158,12 @@
       <workItem from="1543817952460" duration="6980000" />
       <workItem from="1543886247274" duration="10000" />
       <workItem from="1543886324317" duration="142000" />
-      <workItem from="1543886519802" duration="36882000" />
+      <workItem from="1543886519802" duration="36952000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44209000" />
+    <option name="totallyTimeSpent" value="44279000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="676" y="118" width="1193" height="711" extended-state="0" />
@@ -230,8 +225,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/page/tianmao/tianmaoIndex.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="123" column="10" lean-forward="true" selection-start-line="123" selection-start-column="10" selection-end-line="123" selection-end-column="10" />
+        <state relative-caret-position="135">
+          <caret line="120" lean-forward="true" selection-start-line="120" selection-end-line="120" />
           <folding>
             <element signature="e#3235#5484#0" />
           </folding>
