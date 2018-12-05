@@ -14,18 +14,23 @@
     <div class="nav-content">
         <div class="g-left-nav">
             <ul class="item-leftNav" v-for="leftnav in leftNavs">
-                <span v-if="leftnav.url == ''" >{{leftnav.navName}}</span>
+                <span v-if="leftnav.url == ''">{{leftnav.navName}}</span>
                 <a v-if="leftnav.url != ''" href="leftnav.url">{{leftnav.navName}}</a>
             </ul>
         </div>
         <div class="g-right-nav">
-            <ul class="item-rightNav" v-for="rightnav in rightNavs" v-on:mouseover="addActive($event)" v-on:mouseout="removeActive($event)" >
-                {{rightnav.faCon}}
-                <i class="fontCon fa"  class={{rightnav.faCon}} aria-hidden="true"></i>
+            <ul class="item-rightNav" v-for="(rightnav,index) in rightNavs" v-on:mouseover="addActive($event)"
+                v-on:mouseout="removeActive($event)">
+
+                <!--循环data 动态拼接变量  利用methods方法-->
+                <i class="fontCon fa " :class="buildCon(rightnav)" aria-hidden="true"></i>
+
                 <a href="#">{{rightnav.navName}}</a>
                 <span v-if="rightnav.dropMenu == 'true'" class="dropmenu-arrow">
                       <i></i>
                 </span>
+                <span v-if="index==2">|</span>
+
             </ul>
         </div>
     </div>
@@ -48,22 +53,32 @@
     var siteNav = new Vue({
         el: '#site-nav',
         data: {
-            leftNavs: [{navName: '嗨,欢迎来天猫',url:''}, {navName: '请登录',url:'login'}, {navName: '免费注册',url:'register'}],
+            leftNavs: [{navName: '嗨', url: ''}, {navName: '请登录', url: 'login'}, {navName: '免费注册', url: 'register'}],
             rightNavs: [
-                {navName: '我的淘宝', dropMenu:'true'}, {navName: '购物车',dropMenu:'false',faCon:'fa-shopping-cart'}, {navName: '收藏夹',dropMenu:'true'},
-                {navName: '手机版', dropMenu:'false'}, {navName: '淘宝网',dropMenu:'true'}, {navName: '商家支持',dropMenu:'false'},
-                {navName: '网站导航', dropMenu:'true'}],
+                {navName: '我的', dropMenu: 'true'}, {
+                    navName: '购物车',
+                    dropMenu: 'false',
+                    faCon: 'fa-shopping-cart'
+                }, {navName: '收藏夹', dropMenu: 'true'},
+                {navName: '手机版', dropMenu: 'false', faCon: 'fa-mobile fa-lg'}, {
+                    navName: '其他网站',
+                    dropMenu: 'true'
+                }, {navName: '商家支持', dropMenu: 'false'},
+                {navName: '网站导航', dropMenu: 'true', faCon: 'fa-list'}],
             show: 'true',
             isActive: 'true'
         },
         methods: {
-            addActive:function ($event) {
+            addActive: function ($event) {
                 console.log($event.currentTarget);
                 // console.log($event.currentTarget.lastElementChild);
                 // $event.currentTarget.className='rote'
             },
-            removeActive:function ($event) {
+            removeActive: function ($event) {
                 // $event.currentTarget.className = "rote"
+            },
+            buildCon: function (rightnav) {
+                return rightnav.faCon;
             }
         }
     })

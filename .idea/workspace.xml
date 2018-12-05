@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d5dcaa66-e4a4-40da-8aa1-9a41e6b4c731" name="Default Changelist" comment="" />
+    <list default="true" id="d5dcaa66-e4a4-40da-8aa1-9a41e6b4c731" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/tianmao/tianmaoIndex.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/tianmao/tianmaoIndex.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/tianmao.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/tianmao.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/tianmao.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/tianmao.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/tianmao.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/tianmao.scss" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -13,20 +19,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/page/tianmao/tianmaoIndex.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/css/tianmao.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="30" column="10" lean-forward="true" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
+            <state relative-caret-position="365">
+              <caret line="80" column="3" lean-forward="true" selection-start-line="80" selection-start-column="3" selection-end-line="80" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/css/tianmao.scss">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/page/tianmao/tianmaoIndex.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+            <state relative-caret-position="231">
+              <caret line="18" column="17" lean-forward="true" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -53,8 +59,8 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>$fa-font-path</find>
       <find>ul</find>
+      <find>$fa-font-path</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -82,10 +88,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="776" />
-    <option name="y" value="808" />
+    <option name="x" value="544" />
+    <option name="y" value="94" />
     <option name="width" value="1193" />
-    <option name="height" value="621" />
+    <option name="height" value="711" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -105,6 +111,12 @@
               <item name="vueTest" type="b2602c69:ProjectViewProjectNode" />
               <item name="vueTest" type="462c0819:PsiDirectoryNode" />
               <item name="page" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vueTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vueTest" type="462c0819:PsiDirectoryNode" />
+              <item name="page" type="462c0819:PsiDirectoryNode" />
+              <item name="tianmao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="vueTest" type="b2602c69:ProjectViewProjectNode" />
@@ -199,18 +211,18 @@
       <workItem from="1543817952460" duration="6980000" />
       <workItem from="1543886247274" duration="10000" />
       <workItem from="1543886324317" duration="142000" />
-      <workItem from="1543886519802" duration="16727000" />
+      <workItem from="1543886519802" duration="20275000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24054000" />
+    <option name="totallyTimeSpent" value="27602000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="815" y="397" width="1193" height="621" extended-state="0" />
+    <frame x="534" y="143" width="1193" height="711" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1109215" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.060580205" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -259,15 +271,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/css/tianmao.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+        <state relative-caret-position="365">
+          <caret line="80" column="3" lean-forward="true" selection-start-line="80" selection-start-column="3" selection-end-line="80" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/page/tianmao/tianmaoIndex.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="30" column="10" lean-forward="true" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
+        <state relative-caret-position="231">
+          <caret line="18" column="17" lean-forward="true" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
         </state>
       </provider>
     </entry>
