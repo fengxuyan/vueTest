@@ -57,6 +57,16 @@
         padding-left: 3px;
 
       }
+      .personal_dropmenu {
+        position: absolute;
+        //margin-top: 1px;
+        padding: 0 10px;
+        border: 1px solid #eee;
+        border-top: 0;
+        color: #999;
+      }
+
+
       .dropmenu-arrow {
         position: relative;
 
@@ -84,4 +94,12 @@
 //图标颜色
 .fa {
   color: red;
+}
+
+//渐入
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }

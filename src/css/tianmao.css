@@ -35,6 +35,12 @@
       padding: 0 8px; }
       .site-nav .g-right-nav .item-rightNav a {
         padding-left: 3px; }
+      .site-nav .g-right-nav .item-rightNav .personal_dropmenu {
+        position: absolute;
+        padding: 0 10px;
+        border: 1px solid #eee;
+        border-top: 0;
+        color: #999; }
       .site-nav .g-right-nav .item-rightNav .dropmenu-arrow {
         position: relative;
         display: inline-block;
@@ -53,5 +59,11 @@
 
 .fa {
   color: red; }
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s; }
+
+.fade-enter, .fade-leave-to {
+  opacity: 0; }
 
 /*# sourceMappingURL=tianmao.css.map */
