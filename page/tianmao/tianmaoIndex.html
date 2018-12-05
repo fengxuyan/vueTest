@@ -22,10 +22,7 @@
             <ul class="item-rightNav" v-for="(rightnav,index) in rightNavs" v-on:mouseover="addActive($event,index)"
                 v-on:mouseout="removeActive($event,index)">
 
-<!--{{rightnav.personaLists}}-->
-
-
-
+                <!--{{rightnav.personaLists}}-->
 
 
                 <!--循环data 动态拼接变量  利用methods方法-->
@@ -36,7 +33,9 @@
                 <!--"我的" 二级栏目-->
                 <transition name="fade">
 
-                    <ul class="personal_dropmenu" v-if="index==0 && showPer=='true' && rightnav.personaLists"   ><li v-for="(child) in rightnav.personaLists"><a href="child.url">{{child.name}}</a></li></ul>
+                    <ul class="personal_dropmenu" v-if="index==0 && showPer=='true' && rightnav.personaLists">
+                        <li v-for="(child) in rightnav.personaLists"><a href="child.url">{{child.name}}</a></li>
+                    </ul>
 
                 </transition>
 
@@ -44,11 +43,29 @@
                 <!--"收藏夹" 二级栏目-->
                 <transition name="fade">
 
-                    <ul class="personal_dropmenu" v-if="index==2 && showFav=='true' && rightnav.favLists"   ><li v-for="(child) in rightnav.favLists"><a href="child.url">{{child.name}}</a></li></ul>
+                    <ul class="personal_dropmenu" v-if="index==2 && showFav=='true' && rightnav.favLists">
+                        <li v-for="(child) in rightnav.favLists"><a href="child.url">{{child.name}}</a></li>
+                    </ul>
 
                 </transition>
 
+                <!--"其他网站" 二级栏目-->
+                <transition name="fade">
 
+                    <ul class="personal_dropmenu" v-if="index==4 && showSite=='true' && rightnav.siteLists">
+                        <li v-for="(child) in rightnav.siteLists"><a href="child.url">{{child.name}}</a></li>
+                    </ul>
+
+                </transition>
+
+                <!--"导航" 二级栏目-->
+                <transition name="fade">
+
+                    <ul class="personal_dropmenu" v-if="index==6 && showNav=='true' && rightnav.navLists">
+                        <li v-for="(child) in rightnav.navLists"><a href="child.url">{{child.name}}</a></li>
+                    </ul>
+
+                </transition>
 
                 <span v-if="rightnav.dropMenu == 'true'" class="dropmenu-arrow">
                       <i></i>
@@ -60,15 +77,55 @@
     </div>
 </div>
 
-<div class="header">
+<div class="header" id="header">
     <div class="headerLayout">
         <div class="headerCon">
             <span class="mallLogo"></span>
         </div>
-        <div class="mallSearch"></div>
+        <div class="mallSearch">
+
+            <form name="search" action="#" class="form-box">
+                <fieldset>
+
+                    <!--<legend>搜索</legend>-->
+
+                    <div class="searchInput">
+
+                        <input autofocus class="input-box" type="text" autofocus="autofocus" placeholder="商品/品牌/店铺"/>
+
+                        <button class="btn-box">搜索</button>
+                    </div>
+
+                </fieldset>
+
+            </form>
+
+
+            <ul class="tags-lists">
+                <li class="tags-item" v-for="(tagItem,index) in tagsLists"><a href="tagItem.targetUrl">{{tagItem.tagsName}}</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
-<div class="content"></div>
+<div class="content" id="content">
+    <div class="mainNav-box">
+        <ul class="main-nav">
+
+            <li class="mainNavList" v-for="mainnav in mainNavs"><a href="mainnav.targetUrl">{{mainnav.navsName}}</a>
+            </li>
+        </ul>
+    </div>
+    <div class="category-box">
+        <div class="category-on">
+
+        </div>
+
+    </div>
+// 24*2=48 == 86
+    19*2=38
+
+       </div>
 
 <script src="../../src/js/lib/rem.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
@@ -79,44 +136,203 @@
         data: {
             leftNavs: [{navName: '嗨', url: ''}, {navName: '请登录', url: 'login'}, {navName: '免费注册', url: 'register'}],
             rightNavs: [
-                {navName: '我的', dropMenu: 'true', personaLists:[{name:'我的1',url:'#'},{name:'我的2',url:'#'}]},
+                {navName: '我的', dropMenu: 'true', personaLists: [{name: '我的1', url: '#'}, {name: '我的2', url: '#'}]},
                 {navName: '购物车', dropMenu: 'false'},
-                {navName: '收藏夹', dropMenu: 'true', faCon: 'fa-shopping-cart',favLists:[{name:'收藏的宝贝',url:'#'},{name:'收藏的店铺',url:'#'}]},
+                {
+                    navName: '收藏夹',
+                    dropMenu: 'true',
+                    faCon: 'fa-shopping-cart',
+                    favLists: [{name: '收藏的宝贝', url: '#'}, {name: '收藏的店铺', url: '#'}]
+                },
                 {navName: '手机版', dropMenu: 'false', faCon: 'fa-mobile fa-lg'},
-                {navName: '其他网站', dropMenu: 'true'},
+                {navName: '其他网站', dropMenu: 'true', siteLists: [{name: '其他网站1', url: '#'}, {name: '其他网站2', url: '#'}]},
                 {navName: '商家支持', dropMenu: 'false'},
-                {navName: '网站导航', dropMenu: 'true', faCon: 'fa-list'}],
+                {
+                    navName: '网站导航',
+                    dropMenu: 'true',
+                    faCon: 'fa-list',
+                    navLists: [{name: '导航1', url: '#'}, {name: '导航2', url: '#'}]
+                }],
             showFav: 'false',
             showPer: 'false',
-            isActive: 'true'
+            showSite: 'false',
+            showNav: 'false',
         },
         methods: {
-            addActive: function ($event,index) {
+            addActive: function ($event, index) {
                 // console.log(index);
                 // console.log($event.currentTarget);
                 // console.log($event.currentTarget.lastElementChild);
                 // $event.currentTarget.className='rote'
 
-                if(0 == index){
-                    siteNav.showPer='true'
-                }else if(2 == index){
-                    siteNav.showFav='true'
-
+                if (0 == index) {
+                    siteNav.showPer = 'true'
+                } else if (2 == index) {
+                    siteNav.showFav = 'true'
+                } else if (4 == index) {
+                    siteNav.showSite = 'true'
+                } else if (6 == index) {
+                    siteNav.showNav = 'true'
                 }
                 // siteNav.show='true'
-
-
-
             },
             removeActive: function ($event) {
-                siteNav.showPer='false'
-                siteNav.showFav='false'
-                // $event.currentTarget.className = "rote"
+                siteNav.showPer = 'false'
+                siteNav.showFav = 'false'
+                siteNav.showSite = 'false'
+                siteNav.showNav = 'false'
             },
             buildCon: function (rightnav) {
                 return rightnav.faCon;
             }
         }
+    })
+
+    var header = new Vue({
+        el: '#header',
+        data: {
+            tagsLists: [
+                {tagsName: '针织衫', targetUrl: '#'},
+                {tagsName: '连衣裙', targetUrl: '#'},
+                {tagsName: '外套', targetUrl: '#'},
+                {tagsName: '口红', targetUrl: '#'},
+                {tagsName: '包包', targetUrl: '#'},
+                {tagsName: '手机', targetUrl: '#'},
+            ]
+        },
+
+    })
+
+    var content = new Vue({
+        el: '#content',
+        data: {
+
+            mainNavs: [
+                {navsName: '商品分类', targetUrl: '#'},
+                {navsName: '会员', targetUrl: '#'},
+                {navsName: '电器城', targetUrl: '#'},
+                {navsName: '喵鲜生', targetUrl: '#'},
+                {navsName: '医药馆', targetUrl: '#'},
+                {navsName: '营业厅', targetUrl: '#'},
+                {navsName: '魅力惠', targetUrl: '#'},
+                {navsName: '旅行', targetUrl: '#'},
+            ],
+
+            tagsLists: [
+                {
+                    tagsName: '女装/内衣',
+                    childLists: [
+                        {
+                            name: '当季流行',
+                            lists: [
+                                {childName: '女装新品1'},
+                                {childName: '女装新品2'},
+                                {childName: '女装新品3'}
+                            ]
+                        },
+                        {
+                            name: '精选上装',
+                            Lists: [
+                                {childName: '精选上装1'},
+                                {childName: '精选上装2'},
+                                {childName: '精选上装3'}
+                            ]
+                        },
+                        {
+                            name: '特色女装',
+                            Lists: [
+                                {childName: '特色女装1'},
+                                {childName: '特色女装2'},
+                                {childName: '特色女装3'}
+                            ]
+                        },
+                        {
+                            name: '女士下装',
+                            Lists: [
+                                {childName: '女士下装1'},
+                                {childName: '女士下装2'},
+                                {childName: '女士下装3'}
+                            ]
+                        },
+                    ]
+                },
+                {
+                    tagsName: '男装/运动户外',
+                    childLists: [
+                        {
+                            name: '当季流行',
+                            lists: [
+                                {childName: '女装新品1'},
+                                {childName: '女装新品2'},
+                                {childName: '女装新品3'}
+                            ]
+                        },
+                        {
+                            name: '精选上装',
+                            Lists: [
+                                {childName: '精选上装1'},
+                                {childName: '精选上装2'},
+                                {childName: '精选上装3'}
+                            ]
+                        },
+                        {
+                            name: '特色女装',
+                            Lists: [
+                                {childName: '特色女装1'},
+                                {childName: '特色女装2'},
+                                {childName: '特色女装3'}
+                            ]
+                        },
+                        {
+                            name: '女士下装',
+                            Lists: [
+                                {childName: '女士下装1'},
+                                {childName: '女士下装2'},
+                                {childName: '女士下装3'}
+                            ]
+                        },
+                    ]
+                },
+                {
+                    tagsName: "手机/数码/电脑办公",
+                    childLists: [
+                        {
+                            name: '当季流行',
+                            lists: [
+                                {childName: '女装新品1'},
+                                {childName: '女装新品2'},
+                                {childName: '女装新品3'}
+                            ]
+                        },
+                        {
+                            name: '精选上装',
+                            Lists: [
+                                {childName: '精选上装1'},
+                                {childName: '精选上装2'},
+                                {childName: '精选上装3'}
+                            ]
+                        },
+                        {
+                            name: '特色女装',
+                            Lists: [
+                                {childName: '特色女装1'},
+                                {childName: '特色女装2'},
+                                {childName: '特色女装3'}
+                            ]
+                        },
+                        {
+                            name: '女士下装',
+                            Lists: [
+                                {childName: '女士下装1'},
+                                {childName: '女士下装2'},
+                                {childName: '女士下装3'}
+                            ]
+                        },
+                    ]
+                },
+            ]
+        },
+
     })
 </script>
 </body>
