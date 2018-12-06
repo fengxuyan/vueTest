@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d5dcaa66-e4a4-40da-8aa1-9a41e6b4c731" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/page/tianmao/tianmaoIndex.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/tianmao/tianmaoIndex.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/tianmao.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/tianmao.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/tianmao.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/tianmao.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/tianmao.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/tianmao.scss" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,8 +21,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/css/tianmao.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="186" lean-forward="true" selection-start-line="186" selection-end-line="186" />
+            <state relative-caret-position="126">
+              <caret line="263" lean-forward="true" selection-start-line="263" selection-end-line="263" />
             </state>
           </provider>
         </entry>
@@ -27,10 +30,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/page/tianmao/tianmaoIndex.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="120" lean-forward="true" selection-start-line="120" selection-end-line="120" />
+            <state relative-caret-position="439">
+              <caret line="210" lean-forward="true" selection-start-line="210" selection-end-line="210" />
               <folding>
                 <element signature="e#3235#5484#0" />
+                <element signature="e#6762#6975#0" />
+                <element signature="e#7990#9194#0" />
+                <element signature="e#9212#10419#0" />
               </folding>
             </state>
           </provider>
@@ -51,6 +57,7 @@
     <findStrings>
       <find>ul</find>
       <find>$fa-font-path</find>
+      <find>fa</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -78,7 +85,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="676" />
+    <option name="x" value="397" />
     <option name="y" value="118" />
     <option name="width" value="1193" />
     <option name="height" value="711" />
@@ -107,6 +114,13 @@
               <item name="vueTest" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vueTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vueTest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -158,18 +172,18 @@
       <workItem from="1543817952460" duration="6980000" />
       <workItem from="1543886247274" duration="10000" />
       <workItem from="1543886324317" duration="142000" />
-      <workItem from="1543886519802" duration="36952000" />
+      <workItem from="1543886519802" duration="43729000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44279000" />
+    <option name="totallyTimeSpent" value="51056000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="676" y="118" width="1193" height="711" extended-state="0" />
+    <frame x="397" y="118" width="1193" height="711" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.088737205" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.19283277" />
       <window_info id="Structure" order="1" sideWeight="0.50080776" side_tool="true" weight="0.20392491" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -218,17 +232,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/css/tianmao.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="186" lean-forward="true" selection-start-line="186" selection-end-line="186" />
+        <state relative-caret-position="126">
+          <caret line="263" lean-forward="true" selection-start-line="263" selection-end-line="263" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/page/tianmao/tianmaoIndex.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="120" lean-forward="true" selection-start-line="120" selection-end-line="120" />
+        <state relative-caret-position="439">
+          <caret line="210" lean-forward="true" selection-start-line="210" selection-end-line="210" />
           <folding>
             <element signature="e#3235#5484#0" />
+            <element signature="e#6762#6975#0" />
+            <element signature="e#7990#9194#0" />
+            <element signature="e#9212#10419#0" />
           </folding>
         </state>
       </provider>

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../../src/css/lib/reset.css">
     <link rel="stylesheet" href="../../src/css/tianmao.css">
     <link rel="stylesheet" href="../../src/fonts/font-awesome-4.7.0/scss/font-awesome.css">
+    <link rel="stylesheet" href="../../src/css/lib/swiper-3.4.2.min.css">
 </head>
 <body>
 <div class="site-nav" id="site-nav">
@@ -112,12 +113,19 @@
     <div class="mainNav-box">
         <ul class="main-nav">
 
-            <li class="mainNavList" v-for="mainnav in mainNavs"><a href="mainnav.targetUrl">{{mainnav.navsName}}</a>
+            <li class="mainNavList" v-for="(mainnav,index) in mainNavs"><i class="mainListCon fa fa-list fa-2x" v-if="0 == index"></i><a href="mainnav.targetUrl">{{mainnav.navsName}}</a>
             </li>
         </ul>
     </div>
     <div class="category-box">
         <div class="category-on">
+            <ul class="g-left-nav">
+                <li class="g-tag" v-for="(tagsItem, index)  in tagsLists">{{tagsItem.tagsName}}</li>
+            </ul>
+
+            <div class="g-right-panel">
+
+            </div>
 
         </div>
 
@@ -126,6 +134,7 @@
 
 <script src="../../src/js/lib/rem.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+<script src="../../src/js/lib/swiper-3.4.2.min.js"></script>
 
 <script>
     var siteNav = new Vue({
@@ -218,6 +227,43 @@
             tagsLists: [
                 {
                     tagsName: '女装/内衣',
+                    childLists: [
+                        {
+                            name: '当季流行',
+                            lists: [
+                                {childName: '女装新品1'},
+                                {childName: '女装新品2'},
+                                {childName: '女装新品3'}
+                            ]
+                        },
+                        {
+                            name: '精选上装',
+                            Lists: [
+                                {childName: '精选上装1'},
+                                {childName: '精选上装2'},
+                                {childName: '精选上装3'}
+                            ]
+                        },
+                        {
+                            name: '特色女装',
+                            Lists: [
+                                {childName: '特色女装1'},
+                                {childName: '特色女装2'},
+                                {childName: '特色女装3'}
+                            ]
+                        },
+                        {
+                            name: '女士下装',
+                            Lists: [
+                                {childName: '女士下装1'},
+                                {childName: '女士下装2'},
+                                {childName: '女士下装3'}
+                            ]
+                        },
+                    ]
+                },
+                {
+                    tagsName: '女鞋/马丁靴',
                     childLists: [
                         {
                             name: '当季流行',

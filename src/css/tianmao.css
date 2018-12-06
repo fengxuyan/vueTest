@@ -1,5 +1,7 @@
+body {
+  min-width: 990px; }
+
 .site-nav {
-  min-width: 990px;
   font-size: 12px;
   background-color: #F1F2F1;
   border-bottom: 1px solid #e5e5e5;
@@ -78,7 +80,7 @@
   margin: 0 auto;
   text-align: center; }
   .mallSearch .form-box {
-    border: 2px solid  #FF0036; }
+    border: 2px solid #FF0036; }
     .mallSearch .form-box .searchInput {
       display: flex;
       height: 36px; }
@@ -110,25 +112,54 @@
       border-right: 2px solid #ddd;
       padding-right: 6px; }
 
-.content {
-  border-bottom: 2px solid red; }
-  .content .mainNav-box {
+.content .mainNav-box {
+  border-bottom: 2px solid red;
+  height: 35px; }
+.content .main-nav {
+  margin: 0 auto;
+  width: 90%; }
+  .content .main-nav .mainNavList {
+    display: flex;
+    align-items: center;
+    float: left;
+    padding: 0 15px;
+    height: 35px;
+    line-height: 35px; }
+    .content .main-nav .mainNavList .mainListCon {
+      padding-right: 5px;
+      color: #fff; }
+    .content .main-nav .mainNavList a {
+      font-size: 16px;
+      color: #333;
+      font-weight: bold; }
+    .content .main-nav .mainNavList:first-child {
+      width: 15%;
+      background: #FF0036;
+      padding-left: 30px; }
+      .content .main-nav .mainNavList:first-child a {
+        color: #fff; }
+.content .category-box {
+  display: block;
+  height: 500px;
+  width: 100%; }
+  .content .category-box .category-on {
+    display: flex;
+    align-items: stretch;
+    margin: 0 auto;
     width: 90%;
-    margin: 0 auto; }
-  .content .main-nav {
-    height: 35px; }
-    .content .main-nav .mainNavList {
+    background-color: rgba(0, 0, 0, 0.3); }
+    .content .category-box .category-on .g-left-nav {
       display: inline-block;
-      float: left;
-      padding: 0 15px;
-      line-height: 35px; }
-      .content .main-nav .mainNavList a {
-        font-size: 16px;
-        color: #333;
-        font-weight: bold; }
-      .content .main-nav .mainNavList:first-child {
-        background: #FF0036; }
-        .content .main-nav .mainNavList:first-child a {
-          color: #fff; }
+      width: 15%;
+      padding-left: 30px; }
+    .content .category-box .category-on .g-right-panel {
+      display: inline-block;
+      width: 75%;
+      border: 1px solid orange; }
+    .content .category-box .category-on .g-tag {
+      height: 30px;
+      line-height: 30px;
+      font-size: 14px;
+      color: #fff; }
 
 /*# sourceMappingURL=tianmao.css.map */
