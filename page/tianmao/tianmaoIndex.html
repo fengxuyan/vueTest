@@ -113,30 +113,67 @@
     <div class="mainNav-box">
         <ul class="main-nav">
 
-            <li class="mainNavList" v-for="(mainnav,index) in mainNavs"><i class="mainListCon fa fa-list fa-2x" v-if="0 == index"></i><a href="mainnav.targetUrl">{{mainnav.navsName}}</a>
+            <li class="mainNavList" v-for="(mainnav,index) in mainNavs"><i class="mainListCon fa fa-list fa-2x"
+                                                                           v-if="0 == index"></i><a
+                    href="mainnav.targetUrl">{{mainnav.navsName}}</a>
             </li>
         </ul>
     </div>
     <div class="category-box">
         <div class="category-on">
             <ul class="g-left-nav">
-                <li class="g-tag" v-for="(tagsItem, index)  in tagsLists">{{tagsItem.tagsName}}</li>
+                <li v-on:mouseover="showRight($event,tagsItem)" v-on:mouseout="hideRight(tagsItem)"
+                    :class="{isActive: activeName == tagsItem.tagsName} " class="g-tag"
+                    v-for="(tagsItem, index)  in tagsLists">{{tagsItem.tagsName}}
+
+
+                </li>
             </ul>
 
             <div class="g-right-panel">
 
+                <!--"右侧panel分类列表" -->
+                <transition name="fade_rightPanel">
+
+                    <div class="rightPanel" v-if="'true' ==  showRightPanel" v-for="(tagsItem, index)  in tagsLists">
+                        <ul>
+                            <li class="nodeName" v-for="(itemNode,index) in tagsItem.childLists"><p class="g-node">{{itemNode.name}}></p>
+                                <ul class="childNode"><li class="childName" v-for="item in itemNode.lists">{{item.childName}}</li></ul>
+                        </ul>
+                    </div>
+
+                </transition>
+
+
+                <div class="swiper-container" v-if="'false' ==  showRightPanel">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img
+                                src="https://aecpm.alicdn.com/simba/img/TB1W4nPJFXXXXbSXpXXSutbFXXX.jpg"
+                                style="width: 100%;height: 100%;"></div>
+                        <div class="swiper-slide"><img
+                                src="https://aecpm.alicdn.com/simba/img/TB1_JXrLVXXXXbZXVXXSutbFXXX.jpg"
+                                style="width: 100%;height: 100%;"></div>
+                        <div class="swiper-slide"><img
+                                src="https://img.alicdn.com/tps/i4/TB1qsgxtpYqK1RjSZLeSuvXppXa.jpg_1080x1800Q60s50.jpg"
+                                style="width: 100%;height: 100%;"></div>
+                    </div>
+                </div>
             </div>
+
 
         </div>
 
     </div>
 </div>
+<div style="height: 500px"></div>
+
 
 <script src="../../src/js/lib/rem.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
 <script src="../../src/js/lib/swiper-3.4.2.min.js"></script>
 
 <script>
+
     var siteNav = new Vue({
         el: '#site-nav',
         data: {
@@ -224,6 +261,7 @@
                 {navsName: '旅行', targetUrl: '#'},
             ],
 
+            activeName: '',
             tagsLists: [
                 {
                     tagsName: '女装/内衣',
@@ -238,7 +276,7 @@
                         },
                         {
                             name: '精选上装',
-                            Lists: [
+                            lists: [
                                 {childName: '精选上装1'},
                                 {childName: '精选上装2'},
                                 {childName: '精选上装3'}
@@ -246,7 +284,7 @@
                         },
                         {
                             name: '特色女装',
-                            Lists: [
+                            lists: [
                                 {childName: '特色女装1'},
                                 {childName: '特色女装2'},
                                 {childName: '特色女装3'}
@@ -254,7 +292,7 @@
                         },
                         {
                             name: '女士下装',
-                            Lists: [
+                            lists: [
                                 {childName: '女士下装1'},
                                 {childName: '女士下装2'},
                                 {childName: '女士下装3'}
@@ -373,8 +411,32 @@
                         },
                     ]
                 },
-            ]
+            ],
+            showRightPanel: 'false'
         },
+        mounted() {
+            new Swiper('.swiper-container', {
+                // loop: true,
+                // 如果需要分页器
+                pagination: '.swiper-pagination',
+                // 如果需要前进后退按钮
+                paginationClickable: true,
+                autoplay: 2000,
+            })
+        },
+        methods: {
+            showRight: function ($event, tagsItem) {
+                this.activeName = tagsItem.tagsName;
+                content.showRightPanel = 'true'
+
+                console.log($event.currentTarget);
+            },
+            hideRight: function (tagsItem) {
+                // this.activeName = '';
+
+            }
+        }
+
 
     })
 </script>

@@ -112,6 +112,17 @@ body {
 }
 
 
+//渐入
+.fade_rightPanel-enter-active, .fade_rightPanel-leave-active {
+  transition: opacity .5s;
+}
+
+.fade_rightPanel-enter, .fade_rightPanel-leave-to /* .fade-leave-active below version 2.1.8 */
+{
+  opacity: 0;
+}
+
+
 // header
 
 .header {
@@ -237,53 +248,78 @@ body {
           color: #fff;
         }
       }
-
     }
-
-
   }
 
   .category-box {
     display: block;
-    //background-color: #FD5272;
-
-    //border: 1px solid green;
     height: 500px;
     width: 100%;
 
     .category-on {
       display: flex;
       align-items: stretch;
-
       margin: 0 auto;
       width: 90%;
-
       background-color: rgba(0,0,0,.3);
       .g-left-nav {
         display: inline-block;
-
-        width: 15%;
-        padding-left: 30px;
-
+        width: 20%;
+        .isActive {
+          background-color: #fff;
+          color: #FF0036;
+          cursor: pointer;
+        }
       }
       .g-right-panel {
         display: inline-block;
-        width: 75%;
-        border: 1px solid orange;
+        width: 80%;
+
+        .rightPanel {
+          height: 300px;
+          background-color: #fff;
+
+          .nodeName {
+            display: flex;
+            align-items: center;
+
+            padding: 10px;
+            //border: 1px solid blue;
+
+            border-bottom: 1px dashed #ddd;
+           .g-node {
+             font-size: 14px;
+             color: #333;
+             font-weight: bold;
+           }
+            .childNode {
+              width: 80%;
+              padding: 20px;
+              //border: 1px solid gold;
+              .childName {
+                display: inline-block;
+                float: left;
+                padding: 0 10px;
+                color: #8E8F8E;
+                font-size: 14px;
+              }
+            }
+          }
+        }
       }
 
       .g-tag {
         height: 30px;
-        //width: 165px;
         line-height: 30px;
         font-size: 14px;
         color: #fff;
-
-
-        //padding-left: 25px;
+        padding-left: 30px;
+        padding-right: 20px;
 
         //border: 1px solid yellow;
       }
+
+
 
     }
   }
