@@ -119,9 +119,9 @@
             </li>
         </ul>
     </div>
-    <div class="category-box">
-        <div class="category-on" v-on:mouseout.stop="showSwiper($event)">
-            <div class="swiper-container" v-if="'false' ==  showRightPanel">
+    <div class="category-box" v-on:mouseout="showSwiper($event)">
+        <div class="category-on">
+            <div class="swiper-container" v-if="'false' ==  showRightPanel" >
                 <div class="swiper-wrapper">
                     <div class="swiper-slide"><img
                             src="https://aecpm.alicdn.com/simba/img/TB1W4nPJFXXXXbSXpXXSutbFXXX.jpg"
@@ -138,18 +138,19 @@
                 </div>
             </div>
 
-            <ul class="g-left-nav">
-                <li v-on:mouseover.stop="showRight($event,tagsItem)" v-on:mouseout.stop="hideRight(tagsItem)"
+            <ul class="g-left-nav" >
+                <li v-on:mouseover.stop="showRight($event,tagsItem)"
                     :class="{isActive: activeName == tagsItem.tagsName} " class="g-tag"
                     v-for="(tagsItem, index)  in tagsLists">{{tagsItem.tagsName}}
                 </li>
             </ul>
 
-            <div v-if="'true' == showRightLists" class="g-right-panel">
+            <div v-if="'true' == showRightLists" class="g-right-panel"   >
                 <!--"右侧panel分类列表" -->
                 <transition name="fade_rightPanel">
 
-                    <div class="rightPanel" v-if="'true' ==  showRightPanel" v-for="(tagsItem, index)  in tagsLists">
+                    <div  class="rightPanel" v-if="'true' ==  showRightPanel"
+                         v-for="(tagsItem, index)  in tagsLists">
                         <ul>
                             <li class="nodeName" v-for="(itemNode,index) in tagsItem.childLists"><p class="g-node">
                                 {{itemNode.name}}></p>
@@ -160,8 +161,6 @@
                     </div>
 
                 </transition>
-
-
             </div>
 
 
@@ -663,12 +662,16 @@
 
             showSwiper: function ($event) {
 
+                // v-on:mouseout.stop="hideRight(tagsItem)"
+
+
 
                 console.log($event.currentTarget);
 
                 content.showRightPanel = 'false'
-                // content.showRightLists  = 'false'
+                content.showRightLists = 'false'
 
+                event.cancelBubble = true;
 
                 new Swiper('.swiper-container', {
                     // loop: true,
@@ -690,11 +693,10 @@
             hideRight: function (tagsItem) {
                 // this.activeName = '';
 
-                // content.showRightPanel = 'false'
+                content.showRightPanel = 'false'
                 content.showRightLists = 'true'
 
                 console.log(content.showRightPanel);
-                event.cancelBubble = true;
 
                 // new Swiper('.swiper-container', {
                 //     // loop: true,

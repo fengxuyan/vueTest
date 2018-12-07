@@ -152,9 +152,9 @@ body {
         color: #fff; }
 .content .category-box {
   display: block;
-  width: 100%; }
+  width: 100%;
+  background-color: #FD5272; }
   .content .category-box .category-on {
-    background-color: #007aff;
     display: flex;
     align-items: stretch;
     margin: 0 auto;

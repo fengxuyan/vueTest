@@ -265,20 +265,19 @@ body {
     //height: 500px;
     width: 100%;
 
+
+    background-color: #FD5272;
     .category-on {
-      background-color: #007aff;
-
-
       display: flex;
       align-items: stretch;
       margin: 0 auto;
       width: 90%;
       //background-color: rgba(0,0,0,.3);
-
       //border: 1px solid yellow;
       .g-left-nav {
         display: inline-block;
         //width: 37%;
+        //width: 85%;
         position: absolute;
         z-index: 999;
         //height: 302px;
