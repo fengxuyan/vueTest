@@ -69,11 +69,17 @@ body {
 .fade-enter, .fade-leave-to {
   opacity: 0; }
 
-.fade_rightPanel-enter-active, .fade_rightPanel-leave-active {
+.fade_rightPanel-enter-active {
   transition: opacity .5s; }
+
+.fade_rightPanel-leave-active {
+  transition: opacity 0s; }
 
 .fade_rightPanel-enter, .fade_rightPanel-leave-to {
   opacity: 0; }
+
+.fade_rightPanel-move {
+  transition: transform 0s; }
 
 .header {
   display: flex;
@@ -146,26 +152,30 @@ body {
         color: #fff; }
 .content .category-box {
   display: block;
-  height: 500px;
   width: 100%; }
   .content .category-box .category-on {
     display: flex;
     align-items: stretch;
     margin: 0 auto;
     width: 90%;
-    background-color: rgba(0, 0, 0, 0.3); }
+    border: 1px solid yellow; }
     .content .category-box .category-on .g-left-nav {
       display: inline-block;
-      width: 20%; }
+      width: 37%;
+      position: absolute;
+      z-index: 999;
+      height: 302px;
+      background: #000;
+      opacity: .3; }
       .content .category-box .category-on .g-left-nav .isActive {
         background-color: #fff;
         color: #FF0036;
         cursor: pointer; }
     .content .category-box .category-on .g-right-panel {
-      display: inline-block;
-      width: 80%; }
+      width: 80%;
+      margin-left: 20%; }
       .content .category-box .category-on .g-right-panel .rightPanel {
-        height: 300px;
+        height: 302px;
         background-color: #fff; }
         .content .category-box .category-on .g-right-panel .rightPanel .nodeName {
           display: flex;
@@ -184,7 +194,8 @@ body {
               float: left;
               padding: 0 10px;
               color: #8E8F8E;
-              font-size: 14px; }
+              font-size: 14px;
+              cursor: pointer; }
     .content .category-box .category-on .g-tag {
       height: 30px;
       line-height: 30px;
@@ -192,5 +203,8 @@ body {
       color: #fff;
       padding-left: 30px;
       padding-right: 20px; }
+
+.swiper-container {
+  height: 100%; }
 
 /*# sourceMappingURL=tianmao.css.map */

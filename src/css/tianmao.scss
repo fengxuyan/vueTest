@@ -113,13 +113,22 @@ body {
 
 
 //渐入
-.fade_rightPanel-enter-active, .fade_rightPanel-leave-active {
+.fade_rightPanel-enter-active{
   transition: opacity .5s;
+}
+
+.fade_rightPanel-leave-active {
+  transition: opacity 0s;
+
 }
 
 .fade_rightPanel-enter, .fade_rightPanel-leave-to /* .fade-leave-active below version 2.1.8 */
 {
   opacity: 0;
+}
+
+.fade_rightPanel-move {
+  transition: transform 0s;
 }
 
 
@@ -253,7 +262,7 @@ body {
 
   .category-box {
     display: block;
-    height: 500px;
+    //height: 500px;
     width: 100%;
 
     .category-on {
@@ -261,10 +270,19 @@ body {
       align-items: stretch;
       margin: 0 auto;
       width: 90%;
-      background-color: rgba(0,0,0,.3);
+      //background-color: rgba(0,0,0,.3);
+
+      border: 1px solid yellow;
       .g-left-nav {
         display: inline-block;
-        width: 20%;
+        width: 37%;
+        position: absolute;
+        z-index: 999;
+        height: 302px;
+
+
+        background: #000;
+        opacity: .3;
         .isActive {
           background-color: #fff;
           color: #FF0036;
@@ -272,11 +290,13 @@ body {
         }
       }
       .g-right-panel {
-        display: inline-block;
+        //display: inline-block;
         width: 80%;
+        //display: none;
 
+        margin-left: 20%;
         .rightPanel {
-          height: 300px;
+          height: 302px;
           background-color: #fff;
 
           .nodeName {
@@ -302,6 +322,7 @@ body {
                 padding: 0 10px;
                 color: #8E8F8E;
                 font-size: 14px;
+                cursor: pointer;
               }
             }
           }
@@ -323,4 +344,9 @@ body {
 
     }
   }
+}
+
+
+.swiper-container {
+  height: 100%;
 }

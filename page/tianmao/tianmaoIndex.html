@@ -121,43 +121,48 @@
     </div>
     <div class="category-box">
         <div class="category-on">
+            <div class="swiper-container" v-if="'false' ==  showRightPanel">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img
+                            src="https://aecpm.alicdn.com/simba/img/TB1W4nPJFXXXXbSXpXXSutbFXXX.jpg"
+                            style="width: 100%;height: 100%;"></div>
+                    <div class="swiper-slide"><img
+                            src="https://aecpm.alicdn.com/simba/img/TB1W4nPJFXXXXbSXpXXSutbFXXX.jpg"
+                            style="width: 100%;height: 100%;"></div>
+                    <div class="swiper-slide"><img
+                            src="https://aecpm.alicdn.com/simba/img/TB1W4nPJFXXXXbSXpXXSutbFXXX.jpg"
+                            style="width: 100%;height: 100%;"></div>
+                    <div class="swiper-slide"><img
+                            src="https://aecpm.alicdn.com/simba/img/TB1W4nPJFXXXXbSXpXXSutbFXXX.jpg"
+                            style="width: 100%;height: 100%;"></div>
+                </div>
+            </div>
+
             <ul class="g-left-nav">
                 <li v-on:mouseover="showRight($event,tagsItem)" v-on:mouseout="hideRight(tagsItem)"
                     :class="{isActive: activeName == tagsItem.tagsName} " class="g-tag"
                     v-for="(tagsItem, index)  in tagsLists">{{tagsItem.tagsName}}
-
-
                 </li>
             </ul>
 
-            <div class="g-right-panel">
-
+            <div v-if="'true' == showrightLists" class="g-right-panel">
                 <!--"右侧panel分类列表" -->
                 <transition name="fade_rightPanel">
 
-                    <div class="rightPanel" v-if="'true' ==  showRightPanel" v-for="(tagsItem, index)  in tagsLists">
+                    <div class="rightPanel"  v-if="'true' ==  showRightPanel" v-for="(tagsItem, index)  in tagsLists">
                         <ul>
-                            <li class="nodeName" v-for="(itemNode,index) in tagsItem.childLists"><p class="g-node">{{itemNode.name}}></p>
-                                <ul class="childNode"><li class="childName" v-for="item in itemNode.lists">{{item.childName}}</li></ul>
+                            <li class="nodeName" v-for="(itemNode,index) in tagsItem.childLists"><p class="g-node">
+                                {{itemNode.name}}></p>
+                                <ul class="childNode">
+                                    <li class="childName"  v-for="item in itemNode.lists">{{item.childName}}</li>
+                                </ul>
                         </ul>
                     </div>
 
                 </transition>
 
 
-                <div class="swiper-container" v-if="'false' ==  showRightPanel">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img
-                                src="https://aecpm.alicdn.com/simba/img/TB1W4nPJFXXXXbSXpXXSutbFXXX.jpg"
-                                style="width: 100%;height: 100%;"></div>
-                        <div class="swiper-slide"><img
-                                src="https://aecpm.alicdn.com/simba/img/TB1_JXrLVXXXXbZXVXXSutbFXXX.jpg"
-                                style="width: 100%;height: 100%;"></div>
-                        <div class="swiper-slide"><img
-                                src="https://img.alicdn.com/tps/i4/TB1qsgxtpYqK1RjSZLeSuvXppXa.jpg_1080x1800Q60s50.jpg"
-                                style="width: 100%;height: 100%;"></div>
-                    </div>
-                </div>
+
             </div>
 
 
@@ -412,7 +417,8 @@
                     ]
                 },
             ],
-            showRightPanel: 'false'
+            showRightPanel: 'false',
+            showrightLists: 'false'
         },
         mounted() {
             new Swiper('.swiper-container', {
@@ -428,16 +434,32 @@
             showRight: function ($event, tagsItem) {
                 this.activeName = tagsItem.tagsName;
                 content.showRightPanel = 'true'
+                content.showrightLists = 'true'
 
-                console.log($event.currentTarget);
+
+                // console.log($event.currentTarget);
             },
             hideRight: function (tagsItem) {
-                // this.activeName = '';
+                this.activeName = '';
 
+                content.showRightPanel = 'false'
+                content.showRightLists  = 'false'
+
+                console.log(content.showRightPanel);
+
+
+                // new Swiper('.swiper-container', {
+                //     // loop: true,
+                //     // 如果需要分页器
+                //     pagination: '.swiper-pagination',
+                //     // 如果需要前进后退按钮
+                //     paginationClickable: true,
+                //     autoplay: 2000,
+                // })
             }
         }
 
-
+//badianbanxianzaishishangwushiyidianzhong shiyidianbandeshihousangexiaoshileruguoshi
     })
 </script>
 </body>
