@@ -1,7 +1,20 @@
+@mixin fontStyle($size,$color,$weight) {
+  font-size: $size;
+  color: $color;
+  font-weight: $weight;
+}
+
+
 body {
   min-width: 990px;
+  background-color: #F4F5F4;
 
 }
+
+#header, #content {
+  background-color: #fff;
+}
+
 .site-nav {
   //min-width: 990px;
   font-size: 12px;
@@ -113,7 +126,7 @@ body {
 
 
 //渐入
-.fade_rightPanel-enter-active{
+.fade_rightPanel-enter-active {
   transition: opacity .5s;
 }
 
@@ -240,6 +253,7 @@ body {
         padding-right: 5px;
         color: #fff;
       }
+
       a {
         font-size: 16px;
         color: #333;
@@ -267,6 +281,7 @@ body {
 
 
     background-color: #FD5272;
+
     .category-on {
       display: flex;
       align-items: stretch;
@@ -285,18 +300,21 @@ body {
 
         background: #000;
         opacity: .3;
+
         .isActive {
           background-color: #fff;
           color: #FF0036;
           cursor: pointer;
         }
       }
+
       .g-right-panel {
         //display: inline-block;
         width: 80%;
         //display: none;
 
         padding-left: 20%;
+
         .rightPanel {
           //height: 302px;
           background-color: #fff;
@@ -309,11 +327,13 @@ body {
             //border: 1px solid blue;
 
             border-bottom: 1px dashed #ddd;
-           .g-node {
-             font-size: 14px;
-             color: #333;
-             font-weight: bold;
-           }
+
+            .g-node {
+              font-size: 14px;
+              color: #333;
+              font-weight: bold;
+            }
+
             .childNode {
               width: 80%;
               padding: 20px;
@@ -343,7 +363,6 @@ body {
       }
 
 
-
     }
   }
 }
@@ -351,4 +370,87 @@ body {
 
 .swiper-container {
   height: 302px;
+}
+
+
+// 品牌大块
+#brandWall {
+  margin-top: 30px;
+  width: 100%;
+
+}
+
+.brandWall-container {
+  width: 90%;
+
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.brandWall-item {
+  display: inline-block;
+
+  width: 48%;
+  background-color: #fff;
+
+  border-radius: 2px;
+
+  cursor: pointer;
+
+  .head-txt {
+
+    padding: 0 20px;
+    height: 35px;
+    line-height: 35px;
+
+    .cn {
+      @include fontStyle(18px, #333, bold)
+
+    }
+
+    .en {
+      @include fontStyle(14px, #333, bold)
+
+    }
+
+    .more {
+      @include fontStyle(14px, #666, normal);
+      float: right;
+
+    }
+
+
+  }
+
+  .body-pic {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+//品牌小块
+.tags-lists {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 30px;
+
+  .item {
+
+    display: inline-block;
+    float: left;
+
+
+
+    width: 120px;
+    height: 120px;
+    margin: 0 5px 10px;
+
+
+  }
+
 }

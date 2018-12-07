@@ -121,7 +121,7 @@
     </div>
     <div class="category-box" v-on:mouseout="showSwiper($event)">
         <div class="category-on">
-            <div class="swiper-container" v-if="'false' ==  showRightPanel" >
+            <div class="swiper-container" v-if="'false' ==  showRightPanel">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide"><img
                             src="https://aecpm.alicdn.com/simba/img/TB1W4nPJFXXXXbSXpXXSutbFXXX.jpg"
@@ -138,18 +138,18 @@
                 </div>
             </div>
 
-            <ul class="g-left-nav" >
+            <ul class="g-left-nav">
                 <li v-on:mouseover.stop="showRight($event,tagsItem)"
                     :class="{isActive: activeName == tagsItem.tagsName} " class="g-tag"
                     v-for="(tagsItem, index)  in tagsLists">{{tagsItem.tagsName}}
                 </li>
             </ul>
 
-            <div v-if="'true' == showRightLists" class="g-right-panel"   >
+            <div v-if="'true' == showRightLists" class="g-right-panel">
                 <!--"右侧panel分类列表" -->
                 <transition name="fade_rightPanel">
 
-                    <div  class="rightPanel" v-if="'true' ==  showRightPanel"
+                    <div class="rightPanel" v-if="'true' ==  showRightPanel"
                          v-for="(tagsItem, index)  in tagsLists">
                         <ul>
                             <li class="nodeName" v-for="(itemNode,index) in tagsItem.childLists"><p class="g-node">
@@ -168,8 +168,61 @@
 
     </div>
 </div>
-<div style="height: 500px"></div>
 
+<div id="brandWall">
+    <div class="brandWall-container">
+        <div class="brandWall-item">
+            <div class="head-txt">
+                <span class="cn">聚聚聚 </span>
+                <span class="en">this is english </span>
+                <a class="more">更多></a>
+            </div>
+            <a class="body-pic">
+                <img src="https://img.alicdn.com/tfs/TB1ZkoLukCWBuNjy0FaXXXUlXXa-966-644.jpg_490x490q100.jpg_.webp">
+            </a>
+
+        </div>
+
+        <div class="brandWall-item">
+            <div class="head-txt">
+                <span class="cn">聚聚聚 </span>
+                <span class="en">this is english </span>
+                <a class="more">更多></a>
+            </div>
+            <a class="body-pic">
+                <img src="https://img.alicdn.com/tfs/TB1ZkoLukCWBuNjy0FaXXXUlXXa-966-644.jpg_490x490q100.jpg_.webp">
+            </a>
+
+        </div>
+    </div>
+</div>
+
+
+<ul class="tags-lists">
+
+
+    <li class="item"><img src="//img.alicdn.com/i2/2/TB1lL6xPVXXXXcTXpXXSutbFXXX.jpg_100x150q100.jpg_.webp" style="width: 100%;height: 100%;"></li>
+    <li class="item"><img src="https://img.alicdn.com/tfs/TB1PryEemzqK1RjSZPcXXbTepXa-468-1236.jpg" style="width: 100%;height: 100%;"></li>
+
+    <li class="item"><img src="//img.alicdn.com/i2/2/TB1lL6xPVXXXXcTXpXXSutbFXXX.jpg_100x150q100.jpg_.webp" style="width: 100%;height: 100%;"></li>
+    <li class="item"><img src="https://img.alicdn.com/tfs/TB1PryEemzqK1RjSZPcXXbTepXa-468-1236.jpg" style="width: 100%;height: 100%;"></li>
+
+
+    <li class="item"><img src="https://img.alicdn.com/tfs/TB1PryEemzqK1RjSZPcXXbTepXa-468-1236.jpg" style="width: 100%;height: 100%;"></li>
+
+    <li class="item"><img src="//img.alicdn.com/i2/2/TB1lL6xPVXXXXcTXpXXSutbFXXX.jpg_100x150q100.jpg_.webp" style="width: 100%;height: 100%;"></li>
+    <li class="item"><img src="https://img.alicdn.com/tfs/TB1PryEemzqK1RjSZPcXXbTepXa-468-1236.jpg" style="width: 100%;height: 100%;"></li>
+
+    <li class="item"><img src="//img.alicdn.com/i2/2/TB1lL6xPVXXXXcTXpXXSutbFXXX.jpg_100x150q100.jpg_.webp" style="width: 100%;height: 100%;"></li>
+    <li class="item"><img src="https://img.alicdn.com/tfs/TB1PryEemzqK1RjSZPcXXbTepXa-468-1236.jpg" style="width: 100%;height: 100%;"></li>
+
+    <li class="item"><img src="//img.alicdn.com/i2/2/TB1lL6xPVXXXXcTXpXXSutbFXXX.jpg_100x150q100.jpg_.webp" style="width: 100%;height: 100%;"></li>
+    <li class="item"><img src="https://img.alicdn.com/tfs/TB1PryEemzqK1RjSZPcXXbTepXa-468-1236.jpg" style="width: 100%;height: 100%;"></li>
+
+    <li class="item"><img src="//img.alicdn.com/i2/2/TB1lL6xPVXXXXcTXpXXSutbFXXX.jpg_100x150q100.jpg_.webp" style="width: 100%;height: 100%;"></li>
+    <li class="item"><img src="https://img.alicdn.com/tfs/TB1PryEemzqK1RjSZPcXXbTepXa-468-1236.jpg" style="width: 100%;height: 100%;"></li>
+
+</ul>
 
 <script src="../../src/js/lib/rem.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
@@ -654,7 +707,7 @@
                 pagination: '.swiper-pagination',
                 // 如果需要前进后退按钮
                 paginationClickable: true,
-                // autoplay: 2000,
+                autoplay: 2000,
             })
         },
         methods: {
@@ -663,7 +716,6 @@
             showSwiper: function ($event) {
 
                 // v-on:mouseout.stop="hideRight(tagsItem)"
-
 
 
                 console.log($event.currentTarget);
