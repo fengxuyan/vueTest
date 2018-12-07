@@ -120,7 +120,7 @@
         </ul>
     </div>
     <div class="category-box">
-        <div class="category-on">
+        <div class="category-on" v-on:mouseout.stop="showSwiper($event)">
             <div class="swiper-container" v-if="'false' ==  showRightPanel">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide"><img
@@ -139,28 +139,27 @@
             </div>
 
             <ul class="g-left-nav">
-                <li v-on:mouseover="showRight($event,tagsItem)" v-on:mouseout="hideRight(tagsItem)"
+                <li v-on:mouseover.stop="showRight($event,tagsItem)" v-on:mouseout.stop="hideRight(tagsItem)"
                     :class="{isActive: activeName == tagsItem.tagsName} " class="g-tag"
                     v-for="(tagsItem, index)  in tagsLists">{{tagsItem.tagsName}}
                 </li>
             </ul>
 
-            <div v-if="'true' == showrightLists" class="g-right-panel">
+            <div v-if="'true' == showRightLists" class="g-right-panel">
                 <!--"右侧panel分类列表" -->
                 <transition name="fade_rightPanel">
 
-                    <div class="rightPanel"  v-if="'true' ==  showRightPanel" v-for="(tagsItem, index)  in tagsLists">
+                    <div class="rightPanel" v-if="'true' ==  showRightPanel" v-for="(tagsItem, index)  in tagsLists">
                         <ul>
                             <li class="nodeName" v-for="(itemNode,index) in tagsItem.childLists"><p class="g-node">
                                 {{itemNode.name}}></p>
                                 <ul class="childNode">
-                                    <li class="childName"  v-for="item in itemNode.lists">{{item.childName}}</li>
+                                    <li class="childName" v-for="item in itemNode.lists">{{item.childName}}</li>
                                 </ul>
                         </ul>
                     </div>
 
                 </transition>
-
 
 
             </div>
@@ -416,9 +415,238 @@
                         },
                     ]
                 },
+
+
+                {
+                    tagsName: '女鞋/马丁靴/哈哈',
+                    childLists: [
+                        {
+                            name: '当季流行',
+                            lists: [
+                                {childName: '女装新品1'},
+                                {childName: '女装新品2'},
+                                {childName: '女装新品3'}
+                            ]
+                        },
+                        {
+                            name: '精选上装',
+                            Lists: [
+                                {childName: '精选上装1'},
+                                {childName: '精选上装2'},
+                                {childName: '精选上装3'}
+                            ]
+                        },
+                        {
+                            name: '特色女装',
+                            Lists: [
+                                {childName: '特色女装1'},
+                                {childName: '特色女装2'},
+                                {childName: '特色女装3'}
+                            ]
+                        },
+                        {
+                            name: '女士下装',
+                            Lists: [
+                                {childName: '女士下装1'},
+                                {childName: '女士下装2'},
+                                {childName: '女士下装3'}
+                            ]
+                        },
+                    ]
+                },
+                {
+                    tagsName: '李雷/女鞋/马丁靴',
+                    childLists: [
+                        {
+                            name: '当季流行',
+                            lists: [
+                                {childName: '女装新品1'},
+                                {childName: '女装新品2'},
+                                {childName: '女装新品3'}
+                            ]
+                        },
+                        {
+                            name: '精选上装',
+                            Lists: [
+                                {childName: '精选上装1'},
+                                {childName: '精选上装2'},
+                                {childName: '精选上装3'}
+                            ]
+                        },
+                        {
+                            name: '特色女装',
+                            Lists: [
+                                {childName: '特色女装1'},
+                                {childName: '特色女装2'},
+                                {childName: '特色女装3'}
+                            ]
+                        },
+                        {
+                            name: '女士下装',
+                            Lists: [
+                                {childName: '女士下装1'},
+                                {childName: '女士下装2'},
+                                {childName: '女士下装3'}
+                            ]
+                        },
+                    ]
+                },
+
+
+                {
+                    tagsName: '冬冬/女鞋/马丁靴/哈哈',
+                    childLists: [
+                        {
+                            name: '当季流行',
+                            lists: [
+                                {childName: '女装新品1'},
+                                {childName: '女装新品2'},
+                                {childName: '女装新品3'}
+                            ]
+                        },
+                        {
+                            name: '精选上装',
+                            Lists: [
+                                {childName: '精选上装1'},
+                                {childName: '精选上装2'},
+                                {childName: '精选上装3'}
+                            ]
+                        },
+                        {
+                            name: '特色女装',
+                            Lists: [
+                                {childName: '特色女装1'},
+                                {childName: '特色女装2'},
+                                {childName: '特色女装3'}
+                            ]
+                        },
+                        {
+                            name: '女士下装',
+                            Lists: [
+                                {childName: '女士下装1'},
+                                {childName: '女士下装2'},
+                                {childName: '女士下装3'}
+                            ]
+                        },
+                    ]
+                },
+                {
+                    tagsName: '夏夏/李雷/女鞋/马丁靴',
+                    childLists: [
+                        {
+                            name: '当季流行',
+                            lists: [
+                                {childName: '女装新品1'},
+                                {childName: '女装新品2'},
+                                {childName: '女装新品3'}
+                            ]
+                        },
+                        {
+                            name: '精选上装',
+                            Lists: [
+                                {childName: '精选上装1'},
+                                {childName: '精选上装2'},
+                                {childName: '精选上装3'}
+                            ]
+                        },
+                        {
+                            name: '特色女装',
+                            Lists: [
+                                {childName: '特色女装1'},
+                                {childName: '特色女装2'},
+                                {childName: '特色女装3'}
+                            ]
+                        },
+                        {
+                            name: '女士下装',
+                            Lists: [
+                                {childName: '女士下装1'},
+                                {childName: '女士下装2'},
+                                {childName: '女士下装3'}
+                            ]
+                        },
+                    ]
+                },
+
+
+                {
+                    tagsName: '球球/李雷/女鞋/马丁靴',
+                    childLists: [
+                        {
+                            name: '当季流行',
+                            lists: [
+                                {childName: '女装新品1'},
+                                {childName: '女装新品2'},
+                                {childName: '女装新品3'}
+                            ]
+                        },
+                        {
+                            name: '精选上装',
+                            Lists: [
+                                {childName: '精选上装1'},
+                                {childName: '精选上装2'},
+                                {childName: '精选上装3'}
+                            ]
+                        },
+                        {
+                            name: '特色女装',
+                            Lists: [
+                                {childName: '特色女装1'},
+                                {childName: '特色女装2'},
+                                {childName: '特色女装3'}
+                            ]
+                        },
+                        {
+                            name: '女士下装',
+                            Lists: [
+                                {childName: '女士下装1'},
+                                {childName: '女士下装2'},
+                                {childName: '女士下装3'}
+                            ]
+                        },
+                    ]
+                },
+
+                {
+                    tagsName: '马小跳/女鞋/马丁靴',
+                    childLists: [
+                        {
+                            name: '当季流行',
+                            lists: [
+                                {childName: '女装新品1'},
+                                {childName: '女装新品2'},
+                                {childName: '女装新品3'}
+                            ]
+                        },
+                        {
+                            name: '精选上装',
+                            Lists: [
+                                {childName: '精选上装1'},
+                                {childName: '精选上装2'},
+                                {childName: '精选上装3'}
+                            ]
+                        },
+                        {
+                            name: '特色女装',
+                            Lists: [
+                                {childName: '特色女装1'},
+                                {childName: '特色女装2'},
+                                {childName: '特色女装3'}
+                            ]
+                        },
+                        {
+                            name: '女士下装',
+                            Lists: [
+                                {childName: '女士下装1'},
+                                {childName: '女士下装2'},
+                                {childName: '女士下装3'}
+                            ]
+                        },
+                    ]
+                },
             ],
             showRightPanel: 'false',
-            showrightLists: 'false'
+            showRightLists: 'false'
         },
         mounted() {
             new Swiper('.swiper-container', {
@@ -427,26 +655,46 @@
                 pagination: '.swiper-pagination',
                 // 如果需要前进后退按钮
                 paginationClickable: true,
-                autoplay: 2000,
+                // autoplay: 2000,
             })
         },
         methods: {
+
+
+            showSwiper: function ($event) {
+
+
+                console.log($event.currentTarget);
+
+                content.showRightPanel = 'false'
+                // content.showRightLists  = 'false'
+
+
+                new Swiper('.swiper-container', {
+                    // loop: true,
+                    // 如果需要分页器
+                    pagination: '.swiper-pagination',
+                    // 如果需要前进后退按钮
+                    paginationClickable: true,
+                    // autoplay: 2000,
+                })
+            },
             showRight: function ($event, tagsItem) {
                 this.activeName = tagsItem.tagsName;
                 content.showRightPanel = 'true'
-                content.showrightLists = 'true'
+                content.showRightLists = 'true'
 
-
+                event.cancelBubble = true;
                 // console.log($event.currentTarget);
             },
             hideRight: function (tagsItem) {
-                this.activeName = '';
+                // this.activeName = '';
 
-                content.showRightPanel = 'false'
-                content.showRightLists  = 'false'
+                // content.showRightPanel = 'false'
+                content.showRightLists = 'true'
 
                 console.log(content.showRightPanel);
-
+                event.cancelBubble = true;
 
                 // new Swiper('.swiper-container', {
                 //     // loop: true,
@@ -459,7 +707,7 @@
             }
         }
 
-//badianbanxianzaishishangwushiyidianzhong shiyidianbandeshihousangexiaoshileruguoshi
+//
     })
 </script>
 </body>

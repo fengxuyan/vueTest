@@ -154,17 +154,15 @@ body {
   display: block;
   width: 100%; }
   .content .category-box .category-on {
+    background-color: #007aff;
     display: flex;
     align-items: stretch;
     margin: 0 auto;
-    width: 90%;
-    border: 1px solid yellow; }
+    width: 90%; }
     .content .category-box .category-on .g-left-nav {
       display: inline-block;
-      width: 37%;
       position: absolute;
       z-index: 999;
-      height: 302px;
       background: #000;
       opacity: .3; }
       .content .category-box .category-on .g-left-nav .isActive {
@@ -173,9 +171,8 @@ body {
         cursor: pointer; }
     .content .category-box .category-on .g-right-panel {
       width: 80%;
-      margin-left: 20%; }
+      padding-left: 20%; }
       .content .category-box .category-on .g-right-panel .rightPanel {
-        height: 302px;
         background-color: #fff; }
         .content .category-box .category-on .g-right-panel .rightPanel .nodeName {
           display: flex;
@@ -201,10 +198,10 @@ body {
       line-height: 30px;
       font-size: 14px;
       color: #fff;
-      padding-left: 30px;
-      padding-right: 20px; }
+      padding-left: 25px;
+      padding-right: 6px; }
 
 .swiper-container {
-  height: 100%; }
+  height: 302px; }
 
 /*# sourceMappingURL=tianmao.css.map */
